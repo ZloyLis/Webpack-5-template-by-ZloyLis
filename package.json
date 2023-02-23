@@ -2,7 +2,7 @@
   "name": "webpack-5-template-by-zlolis",
   "version": "1.0.0",
   "description": "webpack template for personal non-commercial use",
-  "main": "./src/js/main.js",
+  "private": true,
   "scripts": {
     "serve": "set NODE_ENV=development&&webpack serve",
     "dev": "set NODE_ENV=development&&webpack",
@@ -23,6 +23,7 @@
     "template"
   ],
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
