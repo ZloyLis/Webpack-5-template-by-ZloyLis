@@ -2,33 +2,29 @@
   "name": "webpack-5-template-by-zlolis",
   "version": "1.0.0",
   "description": "webpack template for personal non-commercial use",
-  "main": "main.js",
-
+  "main": "./src/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "set NODE_ENV=development&&webpack serve",
+    "dev": "set NODE_ENV=development&&webpack",
+    "prod": "set NODE_ENV=production&&webpack"
   },
-
+  "author": "ZloyLis",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com//ZloyLis/Webpack-5-template-by-ZloyLis.git"
   },
-
-  "keywords": [
-    "webpack",
-    "template"
-  ],
-
-  "author": "ZloyLis",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ZloyLis/Webpack-5-template-by-ZloyLis/issues"
   },
   "homepage": "https://github.com/ZloyLis/Webpack-5-template-by-ZloyLis#readme",
-
-  "dependencies": {
+  "keywords": [
+    "webpack",
+    "template"
+  ],
+  "devDependencies": {
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
-  },
-
-  "devDependencies": {}
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
 }
