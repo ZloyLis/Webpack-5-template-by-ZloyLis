@@ -64,6 +64,14 @@ const optimization = () => {
     return config
 }
 
+const cssLoader = (extra) =>{
+    const loaders = [ MiniCssExtractPlugin.loader, 'css-loader']
+    if(extra){
+        loaders.push(extra)
+    }
+  return loaders
+}
+
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -110,17 +118,32 @@ module.exports = {
 
     module: {
         rules: [
+
             {
-                test: /\.(sa|sc|c)ss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+                test: /\.css$/i,
+                use:cssLoader()
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.css$/i,
+                use: cssLoader('postcss-loader')
+            },
+            {
+                test: /\.less$/i,
+                use:cssLoader('less-loader')
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: cssLoader('sass-loader')
+            },
+
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: './assets/images/[name][ext]'
                 }
             },
+
             {
                 test: /\.(ico)$/i,
                 type: 'asset/resource',

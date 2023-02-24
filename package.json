@@ -1,5 +1,5 @@
 {
-  "name": "webpack-5-template-by-zlolis",
+  "name": "webpack-5-template-by-zloylis",
   "version": "1.0.0",
   "description": "webpack template for personal non-commercial use",
   "private": true,
@@ -36,6 +36,8 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
