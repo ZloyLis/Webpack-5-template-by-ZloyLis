@@ -3,17 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 //const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 const isDev = process.env.NODE_ENV === 'development';
 isProd = !isDev;
+
 const filename = (ext) => isDev ? `[name]${ext}` : `[name]_[contenthash]${ext}`
 
 
 const optimization = () => {
     const config = {
-        minimize: true,
+        minimize: isProd,
         splitChunks: {
             chunks: 'all'
         },
@@ -22,6 +24,7 @@ const optimization = () => {
     if (isProd) {
         config.minimizer = [
             new CssMinimizerPlugin(),
+            new TerserPlugin(),
             new ImageMinimizerPlugin({
                 minimizer: {
                     implementation: ImageMinimizerPlugin.imageminMinify,
@@ -67,10 +70,10 @@ module.exports = {
     entry: './index.js',
 
     output: {
+        clean: true,
         filename: `js/` + filename('.js'),
         path: path.resolve(__dirname, 'dist'),
         /*assetModuleFilename: `./assets/` + filename('[ext]'),*/
-        clean: true,
     },
 
 
