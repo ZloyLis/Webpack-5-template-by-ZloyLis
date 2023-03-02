@@ -81,9 +81,6 @@ module.exports = {
     filename: `js/${filename('.js')}`,
     path: path.resolve(__dirname, 'dist'),
   },
-  experiments: {
-    topLevelAwait: true
-  },
 
   devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',
 
