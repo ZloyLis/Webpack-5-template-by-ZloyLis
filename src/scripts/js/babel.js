@@ -4,3 +4,7 @@ function timeFunc() {
 }
 
 timeFunc()
+
+import('lodash').then(() =>{
+    console.log('Lodash', _.random(0, 42, true))
+})

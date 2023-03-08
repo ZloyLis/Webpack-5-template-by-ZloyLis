@@ -75,7 +75,7 @@ const cssLoader = (extra) => {
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
-    entry: ['@babel/polyfill', './index.js'],
+    entry: ['@babel/polyfill', './index.jsx'],
     output: {
         clean: true,
         filename: `js/${filename('.js')}`,
@@ -201,6 +201,19 @@ module.exports = {
                         presets: [
                             '@babel/preset-env',
                             '@babel/preset-typescript'
+                        ]
+                    }
+                },
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            '@babel/preset-env',
+                            '@babel/preset-react'
                         ]
                     }
                 },
