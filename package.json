@@ -6,24 +6,29 @@
   "scripts": {
     "serve": "set NODE_ENV=development&&webpack serve",
     "watch": "set NODE_ENV=development&&webpack --watch",
-    "dev"  : "set NODE_ENV=development&&webpack",
-    "prod" : "set NODE_ENV=production&&webpack"
+    "dev": "set NODE_ENV=development&&webpack",
+    "prod": "set NODE_ENV=production&&webpack"
   },
-  "author" : "ZloyLis",
+  "author": "ZloyLis",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url" : "https://github.com//ZloyLis/Webpack-5-template-by-ZloyLis.git"
+    "url": "https://github.com//ZloyLis/Webpack-5-template-by-ZloyLis.git"
   },
   "bugs": {
     "url": "https://github.com/ZloyLis/Webpack-5-template-by-ZloyLis/issues"
   },
+  "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/ZloyLis/Webpack-5-template-by-ZloyLis#readme",
   "keywords": [
     "webpack",
     "template"
   ],
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
@@ -57,6 +62,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "normalize.css": "^8.0.1"
   }
 }

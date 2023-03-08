@@ -1,7 +1,8 @@
-/* import ~normalize.css; */
 import DB from './assets/json.json';
 import './styles/styles.scss';
 import './assets/images/bg.jpg';
+import './scripts/js/babel';
+import './scripts/ts/typeScripts.ts'
 
 const body = document.querySelector('body');
 body.style.backgroundImage = "url('./assets/images/bg.jpg')";

@@ -1,8 +1,17 @@
-#### 1.0.1 (2023-03-02)
+#### 1.0.1 (2023-03-08)
 
-##### Other Changes
+##### Documentation Changes
 
+*  update README.md
+
+##### New Features
+
+*  add babel and typescript (4c188ffd)
 *  enable experiments function - `topLevelAwait: true` (4baf4c57)
+
+<br>
+<br>
+<br>
 
 #### 1.0.0 (2023-02-26)
 
